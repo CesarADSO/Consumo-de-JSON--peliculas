@@ -1,0 +1,82 @@
+/* CONFIGURACIÓN BÁSICA DE UN ARCHIVO CSS */
+
+/* 1. TIPOGRAFÍAS */
+@font-face {
+    font-family: "Montserrat";
+    src: url('assets/fonts/Montserrat-Italic-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('assets/fonts/Montserrat-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 2. ESTILOS GENERALES */
+* {
+    font-family: "Montserrat" sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. VARIABLES */
+:root {
+    --primary-color: #18181b;
+    --secondary-color: #7a4493;
+    --tertiary-color: #1d9bbb;
+    --text-color: #fff;
+}
+
+/* 4. ESTILOS */
+.dashboard {
+    width: 430px;
+    height: 932px;
+    margin: 0 auto;
+    background: var(--primary-color);
+}
+
+.dashboard .top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 30px 0 30px;
+}
+
+.dashboard .top-bar .info {
+    display: flex;
+}
+
+.top-bar .info img {
+    border: 2px solid var(--tertiary-color);
+    border-radius: 50%;
+}
+
+.top-bar .info .textos {
+    padding-left: 8px;
+}
+
+.info .textos h3 {
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+.info .textos h2 {
+    color: var(--text-color);
+}
+
+.top-bar button {
+    border: none;
+    background: transparent;
+}
+
+.dashboard hr {
+    margin-top: 20px;
+    border: 1px solid #494848;
+}
+
+.dashboard h5 {
+    margin: 10px 0 0 20px;
+    color: #494848;
+}
