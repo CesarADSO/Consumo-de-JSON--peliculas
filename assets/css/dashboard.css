@@ -84,7 +84,7 @@
 .dashboard .barra-navegacion {
     display: flex;
     justify-content: space-between;
-    padding: 5px 30px 0 30px;
+    padding: 5px 30px 20px 30px;
     position: relative;
 }
 
@@ -125,12 +125,34 @@
     padding: 30px 30px 0 30px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    height: 650px;
+    /* 👈 Alto fijo dentro del "iPhone" */
+    overflow-y: auto;
+    /* 👈 Scroll vertical */
+}
+
+/* 👇 Opcional: personaliza la barra de scroll en navegadores WebKit (Chrome, Edge) */
+.cont-peliculas::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cont-peliculas::-webkit-scrollbar-thumb {
+    background: #494848;
+}
+
+.cont-peliculas::-webkit-scrollbar-track {
+    background: #1a1a1a;
 }
 
 .cont-peliculas .cont-foto {
     width: 100px;
     height: 130px;
     border-radius: 10px;
+}
+
+.cont-peliculas .card {
+    margin-bottom: 20px;
 }
 
 .cont-foto img {
