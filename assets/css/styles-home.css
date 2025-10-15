@@ -1,0 +1,105 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estructura principal */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0b0f;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor de imágenes */
+.imagenes {
+    width: 100%;
+    max-width: 430px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 18px;
+
+
+}
+
+.imagenes .img1 {
+    margin-top: 100px;
+}
+
+
+.imagenes .img2 {
+    margin-top: -130px;
+}
+
+.imagenes .img3      {
+    margin-top: -130px;
+}
+
+
+
+/* Contenido centrado */
+.content {
+    background-color: #0b0b0f;
+    width: 100%;
+    text-align: center;
+
+    margin-top: -20px;
+    /* empuja un poco sobre las imágenes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo */
+.logo {
+    width: 140px;
+    margin-bottom: 20px;
+}
+
+/* Texto */
+.content p {
+    font-size: 15px;
+    color: #dcdcdc;
+    line-height: 1.5;
+    margin-bottom: 30px;
+
+}
+
+/* Botón */
+.empezar {
+    background: linear-gradient(90deg, #1D9BBB, #7A4493);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 36px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-top: 0;
+}
+
+.empezar:hover {
+    transform: scale(1.05);
+    
+
+}
+
+/* RESPONSIVE MOBILE FIRST */
+@media (min-width: 768px) {
+    .content {
+        padding: 60px 30px;
+    }
+
+    .logo {
+        width: 160px;
+    }
+}
