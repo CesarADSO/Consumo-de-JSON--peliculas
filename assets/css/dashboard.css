@@ -69,6 +69,7 @@
 .top-bar button {
     border: none;
     background: transparent;
+    cursor: pointer;
 }
 
 .dashboard hr {
@@ -115,6 +116,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .barra-navegacion button img {
@@ -126,7 +128,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    height: 650px;
+    height: 550px;
     /* 👈 Alto fijo dentro del "iPhone" */
     overflow-y: auto;
     /* 👈 Scroll vertical */
@@ -177,4 +179,22 @@
 .cont-info .anio {
     color: var(--tertiary-color);
     font-size: 12px;
+}
+
+.filtros {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filtros button {
+    border: none;
+    background: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.filtros p {
+    color: var(--text-color);
+    font-size: 30px;
 }
