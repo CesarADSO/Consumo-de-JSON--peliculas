@@ -29,8 +29,25 @@ body {
 
 }
 
+
+/* Animación al hacer hover en las imágenes */
+.imagenes img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+  border-radius: 8px; /* opcional, suaviza los bordes */
+  cursor: pointer;
+}
+
+/* Efecto hover */
+.imagenes img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
 .imagenes .img1 {
     margin-top: 100px;
+    
+    
+
 }
 
 
@@ -49,13 +66,24 @@ body {
     background-color: #0b0b0f;
     width: 100%;
     text-align: center;
-
+    animation: slideUp 2s ease forwards;
     margin-top: -20px;
     /* empuja un poco sobre las imágenes */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px); /* empieza más abajo */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* vuelve a su lugar */
+  }
 }
 
 /* Logo */
