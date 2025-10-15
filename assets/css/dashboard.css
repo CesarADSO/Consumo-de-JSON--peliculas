@@ -94,7 +94,11 @@
     height: 40px;
     border-radius: 30px;
     border: 1px solid transparent;
-    background: linear-gradient(var(--primary-color), var(--primary-color)) padding-box, /* Fondo del input */ linear-gradient(to bottom, var(--tertiary-color), var(--secondary-color)) border-box; /* Degradado para el borde */;
+    background: linear-gradient(var(--primary-color), var(--primary-color)) padding-box,
+        /* Fondo del input */
+        linear-gradient(to bottom, var(--tertiary-color), var(--secondary-color)) border-box;
+    /* Degradado para el borde */
+    ;
     outline: none;
     color: #494848;
     padding-left: 15px;
@@ -115,4 +119,40 @@
 
 .barra-navegacion button img {
     width: 18px;
+}
+
+.cont-peliculas {
+    padding: 30px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont-peliculas .cont-foto {
+    width: 100px;
+    height: 130px;
+    border-radius: 10px;
+}
+
+.cont-foto img {
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+}
+
+.cont-info {
+    width: 100px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.cont-info .titulo {
+    color: var(--text-color);
+    font-size: 10px;
+}
+
+.cont-info .anio {
+    color: var(--tertiary-color);
+    font-size: 12px;
 }
