@@ -198,3 +198,10 @@
     color: var(--text-color);
     font-size: 30px;
 }
+
+.menu {
+    width: 215px;
+    height: 932px;
+    margin: 20px auto;
+    background: var(--primary-color);
+}
