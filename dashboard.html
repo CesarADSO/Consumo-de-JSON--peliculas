@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+        <div class="top-bar">
+            <div class="info">
+                <img src="assets/img/user.png" alt="usuario">
+                <div class="textos">
+                    <h3>Bienvenida</h3>
+                    <h2>Isabella</h2>
+                </div>
+            </div>
+            <button id="boton-lateral"><img src="assets/img/menu.png" alt="menu lateral"></button>
+        </div>
+        <hr>
+        <h5>Encuentra tu película favorita</h5>
+        <div class="barra-navegacion">
+            <input type="text" id="buscador" placeholder="Buscar...">
+            <button><img src="assets/img/search.png" alt="buscar"></button>
+        </div>
+        <div id="contenedor-peliculas" class="cont-peliculas">
+
+        </div>
+        <hr>
+        <div class="filtros">
+            <button id="accion">Acción</button>
+            <p>|</p>
+            <button id="romance">Romance</button>
+            <p>|</p>
+            <button id="terror">Terror</button>
+        </div>
+        <div class="menu">
+            <button id="boton-lateral-2"><img src="assets/img/menu.png" alt="menu lateral"></button>
+            <h2>Menú Principal</h2>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Aventuras</a></li>
+                <li><a href="#">Animadas</a></li>
+                <li><a href="#">Drama</a></li>
+                <li><a href="#">Comedia</a></li>
+                <li><a href="#">Ficción</a></li>
+                <li><a href="#">Super Heroes</a></li>
+            </ul>
+            <div class="cerrar-sesion">
+                <a href="#">Mi cuenta</a>
+                <a href="index.html">Cerrar Sesión</a>
+            </div>
+        </div>
+        <main id="modal" class="movie-detail-wrapper">
+            <div id="cont-modal" class="movie-detail-card">
+
+               
+            </div>
+        </main> 
+    </div>
+
+
+
+    <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>
