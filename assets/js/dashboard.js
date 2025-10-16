@@ -151,11 +151,3 @@ btnLateral.addEventListener('click', () => {
 btnLateral2.addEventListener('click', () => {
     menu.classList.remove('active');
 })
-
-
-
-// function mostrarPeliculaModal(indice) {
-//     const pelicula = peliculas[indice];
-
-
-// }
