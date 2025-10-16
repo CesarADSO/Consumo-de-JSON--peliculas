@@ -4,8 +4,9 @@ const btnLateral2 = document.getElementById('boton-lateral-2');
 const menu = document.querySelector('.menu');
 const btnAccion = document.getElementById('accion')
 const modal = document.getElementById('modal')
-const btnCerrarModal = document.getElementById('cerrar');
+const contModal = document.getElementById('cont-modal');
 let peliculas = []
+let indiceActual = 0
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch("assets/data/peliculas.json")
@@ -14,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         .then(data => {
             peliculas = data
+
+            mostrarPeliculaModal(indiceActual)
 
             mostrarPeliculas()
         })
@@ -67,6 +70,81 @@ btnLateral2.addEventListener('click', () => {
     menu.classList.remove('active');
 })
 
-btnCerrarModal.addEventListener('click', () => {
-    modal.classList.remove('active')
-})
+
+
+function mostrarPeliculaModal(indice) {
+    const pelicula = peliculas[indice];
+
+    const header = document.createElement('header');
+    header.classList.add('movie-hero');
+    header.style.backgroundImage = `url(${pelicula.ruta_caratula})`
+
+    const a = document.createElement('a');
+    a.addEventListener('click', () => {
+        modal.classList.remove('active');
+    })
+
+    const span = document.createElement('span');
+    span.classList.add('close-button');
+
+    const img = document.createElement('img');
+    img.setAttribute('src', 'assets/img/close.png');
+    img.style.width = '30px';
+    img.setAttribute('alt', 'close');
+
+    const contInfo = document.createElement('section');
+    contInfo.classList.add('movie-info');
+
+    const metaData = document.createElement('div');
+    metaData.classList.add('metadata');
+
+    const titulo = document.createElement('h1');
+    titulo.classList.add('movie-title');
+    titulo.textContent = pelicula.nombre;
+
+    const genero = document.createElement('p');
+    genero.classList.add('movie-tags');
+    genero.textContent = pelicula.categoria + ' - ';
+
+    const anio = document.createElement('span');
+    anio.textContent = pelicula.anio;
+
+    const hr = document.createElement('hr');
+    hr.classList.add('separator');
+
+    const contSinopsis = document.createElement('div');
+    contSinopsis.classList.add('synopsis');
+    
+    const sinopsis = document.createElement('p');
+    sinopsis.textContent = pelicula.sinopsis;
+
+    const contCreditos = document.createElement('div');
+    contCreditos.classList.add('credits');
+
+    const p = document.createElement('p');
+    p.innerHTML = `<strong>Reparto:</strong> <br> ${pelicula.reparto}`;
+
+    const botonVerPelicula = document.createElement('button');
+    botonVerPelicula.classList.add('action-button');
+    botonVerPelicula.textContent = 'VER PELÍCULA';
+
+    const simboloPlay = document.createElement('span');
+    simboloPlay.textContent = '▶';
+
+    contModal.appendChild(header);
+    contModal.appendChild(contInfo);
+    header.appendChild(a);
+    a.appendChild(span);
+    span.appendChild(img);
+    contInfo.appendChild(metaData);
+    contInfo.appendChild(hr);
+    contInfo.appendChild(contSinopsis);
+    contInfo.appendChild(contCreditos);
+    contInfo.appendChild(botonVerPelicula);
+    botonVerPelicula.appendChild(simboloPlay);
+    metaData.appendChild(titulo);
+    metaData.appendChild(genero);
+    genero.appendChild(anio);
+    contSinopsis.appendChild(sinopsis);
+    contCreditos.appendChild(p);
+}
