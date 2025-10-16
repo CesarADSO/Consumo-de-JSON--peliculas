@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    /* background-color: #1a1a1a;  */
+    font-family: "Montserrat", sans-serif;
+}
+
+/* *Contenedor Principal (Tarjeta) */
+
+.dashboard {
+    width: 430px;
+    height: 932px;
+    margin: 0 auto;
+    background: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-detail-wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -100%;
+    transition: .5s;
+}
+
+.movie-detail-card{
+    background-color: #18181b; 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* *Header y Carátula */
+.movie-hero {
+    position: relative;
+    height: 550px;
+    width: 100%;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.poster-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+}
+.movie-hero .close-button{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    background: #18181b; 
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* *Contenido de la Película */
+
+.movie-info {
+    padding: 10px 20px 30px 20px;
+    width: auto;
+}
+
+.movie-title {
+    font-size: 2.2em;
+    margin: 0 0 5px 0;
+    color: white;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7); 
+}
+.movie-tags {
+    font-size: 14px;
+    color: #1d9bbb;
+    margin-bottom: 20px;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid #1d9bbb;
+    margin: 20px 0;
+}
+
+/* *Contenido de texto */
+.synopsis p, .credits p {
+    font-size: 15px;    
+    color: #cccccc;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+
+/* *Estilo para el texto "Reparto:" */
+.credits strong {
+    color: #1d9bbb;
+}
+
+/* *Botón "VER PELÍCULA" */
+
+.action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 14px 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: linear-gradient(to right, #1d9bbb 20%, #7a4493 100%); 
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+.action-button:hover{
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.action-button span {
+    margin-left: 10px; /* Espacio para el icono de play */
+    font-size: 15px;
+}
+
+.movie-detail-wrapper.active {
+    transition: .5s;
+    bottom: 0;
+}

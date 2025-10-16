@@ -157,6 +157,9 @@
 
 .cont-peliculas .card {
     margin-bottom: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .cont-foto img {
@@ -209,7 +212,7 @@
     text-align: end;
     position: absolute;
     top: 0;
-    right: -200px;
+    right: -220px;
     transition: .5s;
 }
 

@@ -2,6 +2,9 @@ const contenedorPeliculas = document.getElementById('contenedor-peliculas')
 const btnLateral = document.getElementById('boton-lateral')
 const btnLateral2 = document.getElementById('boton-lateral-2');
 const menu = document.querySelector('.menu');
+const btnAccion = document.getElementById('accion')
+const modal = document.getElementById('modal')
+const btnCerrarModal = document.getElementById('cerrar');
 let peliculas = []
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,8 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function mostrarPeliculas() {
     peliculas.forEach((pelicula) => {
-        const tarjeta = document.createElement('div');
+        const tarjeta = document.createElement('button');
         tarjeta.classList.add('card');
+        tarjeta.addEventListener('click', () => {
+            modal.classList.add('active');
+        })
 
         const contfoto = document.createElement('div');
         contfoto.classList.add('cont-foto')
@@ -59,4 +65,8 @@ btnLateral.addEventListener('click', () => {
 
 btnLateral2.addEventListener('click', () => {
     menu.classList.remove('active');
+})
+
+btnCerrarModal.addEventListener('click', () => {
+    modal.classList.remove('active')
 })
