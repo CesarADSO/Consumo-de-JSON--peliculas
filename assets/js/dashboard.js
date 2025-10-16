@@ -7,6 +7,7 @@ const contModal = document.getElementById('cont-modal');
 const btnAccion = document.getElementById('accion');
 const btnRomance = document.getElementById('romance');
 const btnTerror = document.getElementById('terror');
+const buscador = document.getElementById('buscador');
 let peliculas = []
 let indiceActual = 0
 
@@ -27,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 })
 
-function mostrarPeliculas() {
-    peliculas.forEach((pelicula, indice) => {
+function mostrarPeliculas(lista = peliculas) {
+    lista.forEach((pelicula, indice) => {
         const tarjeta = document.createElement('button');
         tarjeta.classList.add('card');
         tarjeta.addEventListener('click', () => {
@@ -38,7 +39,7 @@ function mostrarPeliculas() {
             modal.classList.add('active');
 
             // CARGAR LA INFORMACIÓN DE LA PELÍCULA SELECCIONADA
-            const pelicula = peliculas[indice];
+            const pelicula = lista[indice];
 
             // CREAMOS LA VENTANA MODAL DINÁMICAMENTE
             const header = document.createElement('header');
@@ -531,4 +532,17 @@ btnTerror.addEventListener('click', () => {
         contInfo.appendChild(titulo);
         contInfo.appendChild(anio);
     })
+})
+
+buscador.addEventListener('input', (e) => {
+    // EL TOLOWECASE() SE USA PARA CONVERTIR UN TEXTO A MINÚSCULAS
+    const texto = e.target.value.toLowerCase(); 
+    contenedorPeliculas.innerHTML = ''; 
+
+    // EL .INCLUDES SE USA PARA QUE AL BUSCAR LA PELÍCULA DE FORMA PARCIAL LA MUESTRE IGUALMENTE
+    const pelisFiltradas = peliculas.filter(pelicula =>
+        pelicula.nombre.toLowerCase().includes(texto)
+    );
+
+    mostrarPeliculas(pelisFiltradas);
 })
