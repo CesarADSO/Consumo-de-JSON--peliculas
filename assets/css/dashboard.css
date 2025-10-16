@@ -91,7 +91,7 @@
     /* Degradado para el borde */
     ;
     outline: none;
-    color: #494848;
+    color: var(--text-color);
     padding-left: 15px;
 }
 
