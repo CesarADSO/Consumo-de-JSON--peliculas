@@ -36,6 +36,8 @@
     height: 932px;
     margin: 0 auto;
     background: var(--primary-color);
+    position: relative;
+    overflow-x: hidden;
 }
 
 .dashboard .top-bar {
@@ -201,10 +203,25 @@
 
 .menu {
     width: 215px;
-    height: 932px;
+    height: 910px;
     margin: 20px auto;
     background: var(--primary-color);
     text-align: end;
+    position: absolute;
+    top: 0;
+    right: -200px;
+    transition: .5s;
+}
+
+.menu button {
+    display: none;
+    background: none;
+    border: none;
+    position: absolute;
+    left: -10px;
+    top: 35px;
+    cursor: pointer; 
+    z-index: 1;
 }
 
 .menu h2 {
@@ -240,3 +257,12 @@ ul li a {
     font-size: 20px;
 }
 
+.menu.active {
+    transition: .5s;
+    right: 0;
+    box-shadow: -6px 0 8px 0 #000;
+}
+
+.menu.active button {
+    display: block;
+}

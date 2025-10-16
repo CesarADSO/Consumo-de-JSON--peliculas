@@ -1,4 +1,7 @@
 const contenedorPeliculas = document.getElementById('contenedor-peliculas')
+const btnLateral = document.getElementById('boton-lateral')
+const btnLateral2 = document.getElementById('boton-lateral-2');
+const menu = document.querySelector('.menu');
 let peliculas = []
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -49,3 +52,11 @@ function mostrarPeliculas() {
 
     })
 }
+
+btnLateral.addEventListener('click', () => {
+    menu.classList.add('active');
+})
+
+btnLateral2.addEventListener('click', () => {
+    menu.classList.remove('active');
+})
