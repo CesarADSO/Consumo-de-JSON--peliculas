@@ -1,23 +1,11 @@
 /* CONFIGURACIÓN BÁSICA DE UN ARCHIVO CSS */
 
 /* 1. TIPOGRAFÍAS */
-@font-face {
-    font-family: "Montserrat";
-    src: url('assets/fonts/Montserrat-Italic-VariableFont_wght.ttf');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Montserrat";
-    src: url('assets/fonts/Montserrat-VariableFont_wght.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* 2. ESTILOS GENERALES */
 * {
-    font-family: "Montserrat" sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -206,8 +194,8 @@
 
 .menu {
     width: 215px;
-    height: 910px;
-    margin: 20px auto;
+    height: 932px;
+    margin: 0 auto;
     background: var(--primary-color);
     text-align: end;
     position: absolute;
@@ -222,7 +210,7 @@
     border: none;
     position: absolute;
     left: -10px;
-    top: 35px;
+    top: 60px;
     cursor: pointer; 
     z-index: 1;
 }
